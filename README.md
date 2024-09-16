@@ -12,3 +12,9 @@ docker compose run app bundle install
 ```bash
 docker compose up
 ```
+
+## Initialize the database
+```bash
+docker compose exec app rake db:create
+docker compose exec app rails db:migrate
+```
