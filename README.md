@@ -1,24 +1,14 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+An API application to save informations about nearest asteroids using NASA NeoWS.
 
-Things you may want to cover:
 
-* Ruby version
+## Install the Gems
+```bash
+docker compose run app bundle install
+```
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Run the application
+```bash
+docker compose up
+```
