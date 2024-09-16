@@ -1,0 +1,31 @@
+services:
+  app:
+    build: .
+    volumes:
+      - .:/usr/src/app
+      - bundle_cache:/usr/local/bundle
+    environment:
+      - RAILS_ENV=development
+      - DB_USERNAME=postgres
+      - DB_PASSWORD=postgres
+    depends_on:
+      - db
+    ports:
+      - "3000:3000"
+    networks:
+      - app_net
+  db:
+    image: postgres:16.4-alpine3.20
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - "5432:5432"
+    networks:
+      - app_net
+networks:
+  app_net:
+volumes:
+  bundle_cache:
+  db_data:
