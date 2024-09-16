@@ -1,6 +1,6 @@
 # README
 
-An API application to save informations about nearest asteroids using NASA NeoWS.
+An API application to save informations about nearest asteroids.
 
 
 ## Install the Gems
