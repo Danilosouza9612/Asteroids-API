@@ -2,6 +2,10 @@
 
 An API application to save informations about nearest asteroids.
 
+## Build
+```bash
+docker compose build
+```
 
 ## Install the Gems
 ```bash
