@@ -1,13 +1,15 @@
 services:
   app:
-    build: .
+    build: ./dev/
     volumes:
       - .:/usr/src/app
-      - bundle_cache:/usr/local/bundle
+      - ruby_bundles:/usr/local/bundle
     environment:
       - RAILS_ENV=development
+      - DB_HOST=db
       - DB_USERNAME=postgres
       - DB_PASSWORD=postgres
+    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
     depends_on:
       - db
     ports:
@@ -27,5 +29,5 @@ services:
 networks:
   app_net:
 volumes:
-  bundle_cache:
+  ruby_bundles:
   db_data:

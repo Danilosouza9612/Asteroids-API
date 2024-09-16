@@ -14,7 +14,7 @@ development:
   encoding: unicode
   database: nasa_project_development
   pool: 5
-  host: <%= ENV.fetch("DB_HOST") { db } %>
+  host: <%= ENV.fetch("DB_HOST") { 'db' } %>
   username: <%= ENV.fetch("DB_USERNAME")%>
   password: <%= ENV.fetch("DB_PASSWORD")%>
 

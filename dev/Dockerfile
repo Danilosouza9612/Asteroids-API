@@ -6,4 +6,4 @@ RUN apt-get install -y sqlite3 postgresql-client
 WORKDIR /usr/src/app
 
 EXPOSE 3000
-ENTRYPOINT rails s -b 0.0.0.0
+CMD rails s -b 0.0.0.0
